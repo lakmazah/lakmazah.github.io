@@ -33,21 +33,23 @@ body {
   background-color: var(--primary-color);
   color: #fff;
   padding: 20px;
+  /* Align items to the top left */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
-/* Profile photo styling */
+/* Profile photo styling: smaller and in the upper left */
 .profile-photo {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 2px solid #fff;
 }
 
+/* Ensure the profile image fits within its container */
 .profile-photo img {
   width: 100%;
   height: 100%;
@@ -117,12 +119,14 @@ section.content, #research-interests {
   .sidebar {
     width: 100%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: center;
     padding: 10px;
   }
   
   .profile-photo {
-    display: none;
+    margin-right: 15px;
+    margin-bottom: 0;
   }
   
   .main-content {
