@@ -1,11 +1,11 @@
-/* Reset default styles */
+/* Reset default browser styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Color Variables */
+/* Define color variables */
 :root {
   --primary-color: #3a539b;  /* Light navy blue */
   --background-color: #ffffff;
@@ -13,15 +13,15 @@
   --sidebar-width: 220px;
 }
 
-/* Body styling */
+/* Global body styling */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f4f4;
   color: var(--text-color);
-  background-color: #f8f8f8;
   line-height: 1.6;
 }
 
-/* Layout container: sidebar on left, content on right */
+/* Container holds the sidebar and main content */
 .container {
   display: flex;
   min-height: 100vh;
@@ -33,34 +33,32 @@ body {
   background-color: var(--primary-color);
   color: #fff;
   padding: 20px;
-  /* Align items to the top left */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* Centers sidebar content horizontally */
 }
 
-/* Profile photo styling: smaller and in the upper left */
+/* Profile photo styling: small, circular, and constrained */
 .profile-photo {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border: 2px solid #fff;
 }
 
-/* Ensure the profile image fits within its container */
 .profile-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-/* Navigation in sidebar */
+/* Navigation menu styling */
 .sidebar nav ul {
   list-style: none;
   width: 100%;
-  padding: 0;
 }
 
 .sidebar nav ul li {
@@ -81,36 +79,19 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Main content styling */
+/* Main content area styling */
 .main-content {
   flex: 1;
   background-color: var(--background-color);
   padding: 40px;
 }
 
-/* Hero section on Home page */
-.hero {
+/* Section styling */
+.hero, #research-interests {
   margin-bottom: 40px;
 }
 
-/* Section headings */
-h1, h2 {
-  margin-bottom: 20px;
-}
-
-/* Content sections */
-section.content, #research-interests {
-  margin-bottom: 40px;
-}
-
-/* Portfolio items styling */
-.portfolio-item {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Responsive adjustments */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -119,7 +100,6 @@ section.content, #research-interests {
   .sidebar {
     width: 100%;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
     padding: 10px;
   }
