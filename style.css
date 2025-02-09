@@ -1,74 +1,131 @@
-/* Reset some default styles */
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global styles */
+/* Color Variables */
+:root {
+  --primary-color: #3a539b;  /* Light navy blue */
+  --background-color: #ffffff;
+  --text-color: #333;
+  --sidebar-width: 220px;
+}
+
+/* Body styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-color);
+  background-color: #f8f8f8;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
 }
 
-/* Header and Navigation */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style: none;
+/* Layout container: sidebar on left, content on right */
+.container {
   display: flex;
-  justify-content: center;
+  min-height: 100vh;
 }
 
-nav ul li {
-  margin: 0 15px;
+/* Sidebar styling */
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-nav ul li a {
+/* Profile photo styling */
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 2px solid #fff;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navigation in sidebar */
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
-  text-decoration: underline;
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Main Content */
-main {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 15px;
-  background-color: #fff;
-  border-radius: 5px;
+/* Main content styling */
+.main-content {
+  flex: 1;
+  background-color: var(--background-color);
+  padding: 40px;
 }
 
+/* Hero section on Home page */
 .hero {
-  text-align: center;
-  padding: 20px;
+  margin-bottom: 40px;
 }
 
-section.content {
-  padding: 20px;
+/* Section headings */
+h1, h2 {
+  margin-bottom: 20px;
 }
 
+/* Content sections */
+section.content, #research-interests {
+  margin-bottom: 40px;
+}
+
+/* Portfolio items styling */
 .portfolio-item {
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
-  background-color: #333;
-  color: #fff;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  .profile-photo {
+    display: none;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
 }
