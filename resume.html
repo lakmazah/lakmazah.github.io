@@ -3,49 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Website - Resume</title>
+  <title>My Minimalist Website - Resume</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Left Sidebar -->
-    <aside class="sidebar">
-      <div class="profile-photo">
-        <img src="profile.jpg" alt="Your Photo">
+  <header>
+    <div class="header-container">
+      <div class="profile-section">
+        <div class="profile-photo">
+          <img src="profile.jpg" alt="Profile Photo">
+        </div>
+        <div class="profile-info">
+          <h1>Your Name</h1>
+          <p>Current Position</p>
+        </div>
       </div>
-      <nav>
+      <nav class="nav-menu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html" class="active">Resume</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
       </nav>
-    </aside>
+    </div>
+    <hr class="divider">
+  </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <section class="content">
-        <h1>Resume</h1>
-        
-        <h2>Professional Experience</h2>
-        <ul>
-          <li>
-            <strong>Job Title</strong> – Company Name (Year–Year)
-            <p>Brief description of your role and responsibilities.</p>
-          </li>
-          <!-- Add more experiences as needed -->
-        </ul>
-
-        <h2>Education</h2>
-        <ul>
-          <li>
-            <strong>Degree</strong> – Institution Name (Year)
-            <p>Additional details if needed.</p>
-          </li>
-          <!-- Add more education items as needed -->
-        </ul>
-      </section>
-    </main>
-  </div>
+  <main class="main-content">
+    <section class="resume">
+      <h2>Resume</h2>
+      <p>Your resume content goes here.</p>
+      <!-- Add sections for experience, education, etc. -->
+    </section>
+  </main>
 </body>
 </html>
